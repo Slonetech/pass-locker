@@ -26,3 +26,17 @@ class Accounts:
         for account in cls.user_accounts:
             if account.user_name == user_name:
                 return account
+
+    @classmethod
+    def account_exists(cls, user_name):
+        '''
+        this function loops through the present array of accounts while searching for the username entered by the user and returns true/false
+        '''
+        for account in cls.user_accounts:
+            if account.user_name == user_name:
+                return True
+        return False
+
+    @classmethod
+    def display_accounts(cls):
+        return cls.user_accounts
